@@ -1,0 +1,138 @@
+/* common css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(20, 19, 19);
+}
+/* navbar css */
+.nav-logo{
+    text-align: center;
+}
+.nav-item ul{
+    display: flex;
+    justify-content: center;
+    
+}
+.nav-item ul li{
+    list-style: none;
+}
+.nav-item ul li a{
+    text-decoration: none;
+    margin: 0 1em;
+    color: rgb(218, 18, 84);
+    font-weight: 600;
+}
+/* navbar responsive */
+@media only screen and (min-width:689px) {
+    nav{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .nav-logo{
+        text-align: left;
+        padding-left: 50px;
+    }
+    .nav-item ul{
+        justify-content: right;
+        padding-right: 50px;
+    }
+}
+/* banner css */
+.header-photo{
+    display: flex;
+    justify-content: center;
+}
+.header-photo img:hover{
+    transform: rotate(45deg);
+    transition: 2s;
+}
+.header-photo img{
+    height: 256px;
+    width: 256px;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+.header-content a{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(218, 18, 84);
+}
+.header-content a:hover{
+    background-color: white;
+    color: rgb(218, 18, 84);
+        border: 1px solid rgb(218, 18, 84);
+        transition: .3s;
+        transform: scale(1.3);
+}
+/* banner responsive */
+@media screen and (min-width:689px) {
+    header{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .header-photo{
+        order: 2;
+        flex-grow: 2;
+    }
+
+}
+/* collection css */
+.collections{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+}
+.collection-title{
+    text-align: center;
+}
+.collection-sec-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+}
+.collection-sec-button a{
+    text-decoration: none;
+    color:rgb(218, 18, 84) ;
+    font-weight: 700;
+
+}
+@media screen and (min-width:689px) {
+    .collections{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:992px) {
+    .collections{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.contact-area{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+hr{
+    border: 2px solid rgb(218, 18, 84);
+}
+@media screen and (min-width:689px) {
+    .contact-area{
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 10px;
+    }
+}
+footer{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
